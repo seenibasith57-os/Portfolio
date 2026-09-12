@@ -1,0 +1,108 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" width="100%" height="100%">
+  <defs>
+    <linearGradient id="salesBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0f172a"/>
+      <stop offset="100%" stop-color="#090d16"/>
+    </linearGradient>
+    <linearGradient id="chartGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="rgba(56, 189, 248, 0.4)"/>
+      <stop offset="100%" stop-color="rgba(56, 189, 248, 0.0)"/>
+    </linearGradient>
+    <linearGradient id="foreGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="rgba(168, 85, 247, 0.4)"/>
+      <stop offset="100%" stop-color="rgba(168, 85, 247, 0.0)"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Container Window -->
+  <rect width="800" height="450" rx="16" fill="url(#salesBg)"/>
+  
+  <!-- Header Bar -->
+  <rect width="800" height="40" fill="rgba(15, 23, 42, 0.9)" rx="16"/>
+  <circle cx="25" cy="20" r="6" fill="#ef4444"/>
+  <circle cx="45" cy="20" r="6" fill="#f59e0b"/>
+  <circle cx="65" cy="20" r="6" fill="#10b981"/>
+  <text x="400" y="25" text-anchor="middle" font-family="'Inter', sans-serif" font-size="13" font-weight="600" fill="#38bdf8">AI Sales Analytics &amp; Revenue Forecasting Dashboard — XGBoost &amp; Streamlit</text>
+
+  <!-- Dashboard Container -->
+  <!-- Top Bar: KPI Summary Cards -->
+  <g transform="translate(30, 55)">
+    <!-- KPI 1: Total Revenue -->
+    <rect x="0" y="0" width="230" height="70" rx="8" fill="rgba(30, 41, 59, 0.7)" stroke="rgba(56, 189, 248, 0.3)"/>
+    <text x="15" y="25" font-family="'Inter', sans-serif" font-size="11" fill="#94a3b8">TOTAL REVENUE (YTD)</text>
+    <text x="15" y="52" font-family="'Outfit', sans-serif" font-size="22" font-weight="800" fill="#f8fafc">$1,248,500</text>
+    <text x="150" y="50" font-family="'Inter', sans-serif" font-size="12" font-weight="bold" fill="#10b981">+18.4% ↑</text>
+
+    <!-- KPI 2: XGBoost Forecast Accuracy -->
+    <rect x="255" y="0" width="230" height="70" rx="8" fill="rgba(30, 41, 59, 0.7)" stroke="rgba(99, 102, 241, 0.3)"/>
+    <text x="270" y="25" font-family="'Inter', sans-serif" font-size="11" fill="#94a3b8">XGBOOST MODEL ACCURACY</text>
+    <text x="270" y="52" font-family="'Outfit', sans-serif" font-size="22" font-weight="800" fill="#818cf8">95.6% R²</text>
+    <text x="415" y="50" font-family="'Inter', sans-serif" font-size="12" font-weight="bold" fill="#38bdf8">Optimal</text>
+
+    <!-- KPI 3: Forecasted Growth -->
+    <rect x="510" y="0" width="230" height="70" rx="8" fill="rgba(30, 41, 59, 0.7)" stroke="rgba(168, 85, 247, 0.3)"/>
+    <text x="525" y="25" font-family="'Inter', sans-serif" font-size="11" fill="#94a3b8">NEXT QTR FORECAST</text>
+    <text x="525" y="52" font-family="'Outfit', sans-serif" font-size="22" font-weight="800" fill="#c084fc">+$342,000</text>
+    <text x="670" y="50" font-family="'Inter', sans-serif" font-size="12" font-weight="bold" fill="#c084fc">Q4 Target</text>
+  </g>
+
+  <!-- Middle Main Area: Interactive Plotly Chart Mockup -->
+  <rect x="30" y="140" width="490" height="215" rx="8" fill="rgba(15, 23, 42, 0.8)" stroke="rgba(255,255,255,0.08)"/>
+  <text x="45" y="165" font-family="'Outfit', sans-serif" font-size="13" font-weight="bold" fill="#f8fafc">Monthly Revenue Trend &amp; AI Time-Series Prediction</text>
+
+  <!-- Chart Grid & Curves -->
+  <g transform="translate(45, 185)">
+    <!-- Y Axis Lines -->
+    <line x1="0" y1="0" x2="450" y2="0" stroke="rgba(255,255,255,0.06)"/>
+    <line x1="0" y1="40" x2="450" y2="40" stroke="rgba(255,255,255,0.06)"/>
+    <line x1="0" y1="80" x2="450" y2="80" stroke="rgba(255,255,255,0.06)"/>
+    <line x1="0" y1="120" x2="450" y2="120" stroke="rgba(255,255,255,0.06)"/>
+
+    <!-- Historical Line Fill -->
+    <path d="M 0,110 Q 50,90 100,70 T 200,80 T 300,30 L 300,140 L 0,140 Z" fill="url(#chartGrad)"/>
+    <path d="M 0,110 Q 50,90 100,70 T 200,80 T 300,30" fill="none" stroke="#38bdf8" stroke-width="3"/>
+
+    <!-- Forecast Line (Dashed Purple) Fill -->
+    <path d="M 300,30 Q 350,20 400,10 L 450,15 L 450,140 L 300,140 Z" fill="url(#foreGrad)"/>
+    <path d="M 300,30 Q 350,20 400,10 L 450,15" fill="none" stroke="#c084fc" stroke-width="3" stroke-dasharray="6,4"/>
+
+    <!-- Data points -->
+    <circle cx="300" cy="30" r="5" fill="#38bdf8" stroke="#ffffff" stroke-width="2"/>
+    <circle cx="400" cy="10" r="5" fill="#c084fc" stroke="#ffffff" stroke-width="2"/>
+
+    <!-- X-Axis Labels -->
+    <text x="0" y="155" font-family="sans-serif" font-size="10" fill="#64748b">Jan</text>
+    <text x="100" y="155" font-family="sans-serif" font-size="10" fill="#64748b">Apr</text>
+    <text x="200" y="155" font-family="sans-serif" font-size="10" fill="#64748b">Jul</text>
+    <text x="300" y="155" font-family="sans-serif" font-size="10" fill="#38bdf8" font-weight="bold">Oct (Actual)</text>
+    <text x="400" y="155" font-family="sans-serif" font-size="10" fill="#c084fc" font-weight="bold">Dec (AI Forecast)</text>
+  </g>
+
+  <!-- Right Side Panel: Interactive Filters & Insights -->
+  <rect x="540" y="140" width="230" height="215" rx="8" fill="rgba(15, 23, 42, 0.8)" stroke="rgba(255,255,255,0.08)"/>
+  <text x="555" y="165" font-family="'Outfit', sans-serif" font-size="13" font-weight="bold" fill="#f8fafc">Dynamic Filters &amp; Insights</text>
+
+  <g transform="translate(555, 180)">
+    <!-- Filter dropdown 1 -->
+    <rect x="0" y="0" width="200" height="28" rx="4" fill="rgba(30, 41, 59, 0.9)" stroke="rgba(56, 189, 248, 0.3)"/>
+    <text x="12" y="18" font-family="sans-serif" font-size="11" fill="#cbd5e1">Region: <tspan font-weight="bold" fill="#38bdf8">North America</tspan></text>
+
+    <!-- Filter dropdown 2 -->
+    <rect x="0" y="36" width="200" height="28" rx="4" fill="rgba(30, 41, 59, 0.9)" stroke="rgba(56, 189, 248, 0.3)"/>
+    <text x="12" y="54" font-family="sans-serif" font-size="11" fill="#cbd5e1">Product: <tspan font-weight="bold" fill="#38bdf8">Enterprise SaaS</tspan></text>
+
+    <!-- Automated Insights card -->
+    <rect x="0" y="74" width="200" height="90" rx="6" fill="rgba(16, 185, 129, 0.1)" stroke="rgba(16, 185, 129, 0.3)"/>
+    <text x="10" y="93" font-family="sans-serif" font-size="11" font-weight="bold" fill="#10b981">💡 AI Business Insight:</text>
+    <text x="10" y="112" font-family="sans-serif" font-size="10" fill="#cbd5e1">SaaS revenue projected to increase</text>
+    <text x="10" y="127" font-family="sans-serif" font-size="10" fill="#cbd5e1">by 22% in Q4 due to high enterprise</text>
+    <text x="10" y="142" font-family="sans-serif" font-size="10" fill="#cbd5e1">retention &amp; seasonal demand.</text>
+  </g>
+
+  <!-- Bottom Panel: Natural Language Q&A Bar -->
+  <rect x="30" y="370" width="740" height="50" rx="8" fill="rgba(30, 41, 59, 0.9)" stroke="rgba(168, 85, 247, 0.4)"/>
+  <text x="50" y="400" font-family="sans-serif" font-size="12" font-weight="bold" fill="#c084fc">💬 Natural Language Q&amp;A:</text>
+  <text x="210" y="400" font-family="sans-serif" font-size="12" fill="#e2e8f0">"Which product category yielded the highest profit margin in Q3?"</text>
+  <rect x="650" y="378" width="110" height="34" rx="6" fill="url(#badgeGrad)"/>
+  <text x="705" y="399" text-anchor="middle" font-family="sans-serif" font-size="11" font-weight="bold" fill="#ffffff">Ask AI →</text>
+</svg>

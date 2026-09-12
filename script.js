@@ -181,6 +181,14 @@ function downloadResume() {
       <p>Built an AI medical query chatbot providing health information through an intuitive conversational GUI.</p>
       <p><span class="tech-tag">Python</span> <span class="tech-tag">NLP</span> <span class="tech-tag">Machine Learning</span> <span class="tech-tag">Streamlit</span></p>
 
+      <div class="project-title" style="margin-top:10px;">4. Terminal RAG Chatbot</div>
+      <p>Built a local Retrieval-Augmented Generation chatbot with Sentence Transformers, FAISS, BM25, Cross-Encoder, and FLAN-T5.</p>
+      <p><span class="tech-tag">Python</span> <span class="tech-tag">RAG</span> <span class="tech-tag">FAISS</span> <span class="tech-tag">BM25</span> <span class="tech-tag">Cross-Encoder</span> <span class="tech-tag">FLAN-T5</span></p>
+
+      <div class="project-title" style="margin-top:10px;">5. AI-Driven Sales &amp; Revenue Forecasting Analytics Dashboard</div>
+      <p>Developed an AI analytics dashboard with XGBoost time-series revenue forecasting and Natural Language Q&amp;A insights.</p>
+      <p><span class="tech-tag">Python</span> <span class="tech-tag">Streamlit</span> <span class="tech-tag">Pandas</span> <span class="tech-tag">Plotly</span> <span class="tech-tag">XGBoost</span> <span class="tech-tag">Scikit-learn</span></p>
+
       <h2>Technical Skills</h2>
       <ul>
         <li><strong>Languages &amp; Data:</strong> Python, SQL, Data Preprocessing, Feature Engineering</li>
